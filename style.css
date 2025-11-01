@@ -1,14 +1,14 @@
 body {
-    font-family: 'Times New Roman', Times, serif; /* Changed to a serif font for a classic 'report' look */
+    font-family: 'Times New Roman', Times, serif; 
     line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #fcfcfc; /* Very light background */
+    background-color: #fcfcfc; 
     color: #333;
 }
 
 header {
-    background-color: #0d1a2b; /* Dark, professional color */
+    background-color: #0d1a2b; 
     color: #fff;
     padding: 1.5rem;
     text-align: center;
@@ -36,7 +36,7 @@ nav a:hover {
 
 main {
     padding: 2rem;
-    max-width: 850px; /* Max width for readability */
+    max-width: 850px; 
     margin: 0 auto;
 }
 
@@ -45,7 +45,7 @@ footer {
     color: #ccc;
     text-align: center;
     padding: 1rem;
-    margin-top: 3rem; /* Add space above the footer */
+    margin-top: 3rem; 
 }
 
 /* --- Homepage and Report Listing Styles --- */
@@ -70,12 +70,11 @@ footer {
     font-weight: normal; 
 }
 
-/* This targets ONLY the bold text (<strong>) inside the intro paragraph */
-.intro-text strong {
+/* This targets ONLY the bold text (<b>) inside the intro paragraph */
+.intro-text b {
     font-weight: bold;
     color: #0d1a2b; 
 }
-
 
 .latest-report h3 {
     text-align: center;
@@ -132,6 +131,12 @@ footer {
     margin-bottom: 0.5rem;
 }
 
+/* Custom CSS to force BOLDING (FINAL FIX) */
+.report-content b {
+    font-weight: 700 !important; /* Force a strong bold weight */
+    color: #0d1a2b; /* Make the bold text slightly darker for contrast */
+}
+
 .section-header {
     border-bottom: 2px solid #ccc;
     padding-bottom: 0.5rem;
@@ -160,23 +165,32 @@ footer {
     text-decoration: underline;
 }
 
-/* Styles for responsive video embed (for YouTube short) */
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    margin: 20px auto;
-    max-width: 100%;
+/* Styles for the FINAL Video Link Button */
+.video-link-wrapper {
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px;
 }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+.video-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff0000; /* YouTube Red */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.video-button:hover {
+    background-color: #cc0000;
+}
+
+.video-button .icon {
+    margin-right: 10px;
 }
 
 .media-caption {
