@@ -1,0 +1,210 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* Changed to a serif font for a classic 'report' look */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc; /* Very light background */
+    color: #333;
+}
+
+header {
+    background-color: #0d1a2b; /* Dark, professional color */
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    color: #a0c4ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #1a324c;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 850px; /* Max width for readability */
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #0d1a2b;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem; /* Add space above the footer */
+}
+
+/* --- Homepage and Report Listing Styles --- */
+
+.home-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.home-intro h2 {
+    color: #0d1a2b;
+    font-size: 1.8rem;
+}
+
+/* Custom style for the introductory paragraph (Font Size Increase) */
+.intro-text {
+    font-size: 1.15rem; 
+    max-width: 650px; 
+    margin: 1rem auto;
+    font-weight: normal; 
+}
+
+/* This targets ONLY the bold text (<strong>) inside the intro paragraph */
+.intro-text strong {
+    font-weight: bold;
+    color: #0d1a2b; 
+}
+
+
+.latest-report h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+/* Intro paragraph style on reports page */
+.intro {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Report listing container */
+.report-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.report-preview {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.report-preview h3 a, .report-preview h4 a {
+    color: #0077b6; /* A clean blue */
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.report-preview h3 a:hover, .report-preview h4 a:hover {
+    text-decoration: underline;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* --- Individual Report Post Styling (report1.html) --- */
+.report-post h2 {
+    font-size: 2.2rem;
+    color: #0d1a2b;
+    border-bottom: 3px solid #0077b6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    color: #444;
+    font-size: 1.3rem;
+}
+
+.report-content ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.back-link {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.back-link a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for responsive video embed (for YouTube short) */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.media-caption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    nav a {
+        margin: 0 0.5rem;
+        display: block;
+        padding: 0.5rem 0;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
